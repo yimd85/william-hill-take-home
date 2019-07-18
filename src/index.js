@@ -5,11 +5,10 @@ import { createStore, applyMiddleware } from 'redux';
 import reduxPromise from 'redux-promise';
 import reducers from './reducers';
 import App from './components/app';
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 const store = createStore(
     reducers,
-    composeWithDevTools(applyMiddleware(reduxPromise))
+    applyMiddleware(reduxPromise)
 );
 
 ReactDOM.render(
